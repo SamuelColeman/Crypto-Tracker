@@ -1,0 +1,8 @@
+.App {
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "navbar navbar"
+    "coinCards coinCards";
+    justify-content: center;
+}

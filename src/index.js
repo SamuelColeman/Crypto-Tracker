@@ -1,16 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Header from '../src/Components/Header/Header';
-import NavBar from '../src/Components/NavBar/NavBar';
-import CoinCards from '../src/Components/CoinCards/CoinCards';
 import reportWebVitals from './reportWebVitals';
+import App from '../src/Components/App/App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Header />
-    <NavBar />
-    <CoinCards />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

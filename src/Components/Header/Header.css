@@ -1,1 +1,8 @@
+.Header {
+    grid-area: header;
+    background-color: lightgray;
+}
 
+.header-title {
+    font-size: 9vh;
+}
