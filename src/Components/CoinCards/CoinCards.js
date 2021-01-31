@@ -26,8 +26,7 @@ class CoinCards extends Component {
             return (<CoinCard coinCardData={coinCard}/>);
         })
         return (
-            <div className="CoinCards">
-                <button onClick={this.getCoinCards}/>
+            <div className="CoinCards" onHover={this.getCoinCards()}>
                 {mapCoinCards}
             </div>
           );

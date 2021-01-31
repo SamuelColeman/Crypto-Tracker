@@ -1,0 +1,7 @@
+.CoinCards {
+    grid-area: coinCards;
+    grid-template-areas: 
+    "coinCard coinCard";
+    max-height: 75vh;
+    overflow: scroll;
+}

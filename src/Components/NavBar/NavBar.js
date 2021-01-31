@@ -5,8 +5,7 @@ class NavBar extends Component {
   render() {
     return (
       <div className="NavBar">
-        <input className="nav-bar-search-input"></input>
-        <button className="nav-bar-search-button" name="Search"></button>
+        <input className="nav-bar-search-input" placeholder="Search"></input>
       </div>
     );
   };

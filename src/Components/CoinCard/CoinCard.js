@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './CoinCard.css';
+import '../CoinCard/CoinCard.css';
 
 class CoinCard extends Component {
     constructor(props) {
@@ -11,10 +11,10 @@ class CoinCard extends Component {
 
   render() {
     return (
-      <section className="CoinCard">
+      <div id={this.state.coinCardData.id} className="CoinCard">
         <h1 className="coin-card-title">{this.state.coinCardData.name}</h1>
-        <h2 className="coin-card-price">{this.state.coinCardData.price_usd}</h2>
-      </section>
+        <h2 className="coin-card-price">${this.state.coinCardData.price_usd}</h2>
+      </div>
     );
   };
 }
