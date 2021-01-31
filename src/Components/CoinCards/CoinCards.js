@@ -8,30 +8,27 @@ class CoinCards extends Component {
         super();
         this.state = {
             coinCards: [],
-            mappedCoinCards: []
+            coinCardData: { name: 'Bitcoin'}
         }
-    }
-
-    mapCoinCards = async () => {
-        await this.state.coinCards.forEach(coinCard => {
-            this.state.mappedCoinCards.push(<CoinCard coinCardData={coinCard}/>);
-        })
     }
 
   getCoinCards = async () => {
     try {
         const coinCards = await fetchCoinCards()
-        await this.setState({ coinCards })
-        await this.mapCoinCards()
+        this.setState({ coinCards })
     } catch(error) {
           console.log(error)
     }
   }
 
     render() {
+        const mapCoinCards = this.state.coinCards.map(coinCard => {
+            return (<CoinCard coinCardData={coinCard}/>);
+        })
         return (
             <div className="CoinCards">
-                {this.state.mappedCoinCards}
+                <button onClick={this.getCoinCards}/>
+                {mapCoinCards}
             </div>
           );
     }

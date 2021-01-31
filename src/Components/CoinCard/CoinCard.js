@@ -13,6 +13,7 @@ class CoinCard extends Component {
     return (
       <section className="CoinCard">
         <h1 className="coin-card-title">{this.state.coinCardData.name}</h1>
+        <h2 className="coin-card-price">{this.state.coinCardData.price_usd}</h2>
       </section>
     );
   };
