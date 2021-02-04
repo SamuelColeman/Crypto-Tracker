@@ -1,8 +1,10 @@
 .Header {
     grid-area: header;
-    background-color: lightgray;
+    background-color: #5F84BD;
 }
 
 .header-title {
-    font-size: 9vh;
+    font-size: 5vh;
+    color: white;
+    padding-left: 2vh;
 }
