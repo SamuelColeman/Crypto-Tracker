@@ -12,6 +12,10 @@ class CoinCards extends Component {
         }
     }
 
+    componentDidMount() {
+        this.getCoinCards()
+    }
+
   getCoinCards = async () => {
     try {
         const coinCards = await fetchCoinCards()
@@ -26,7 +30,15 @@ class CoinCards extends Component {
             return (<CoinCard coinCardData={coinCard}/>);
         })
         return (
-            <div className="CoinCards" onHover={this.getCoinCards()}>
+            <div className="CoinCards">
+                <section className="coin-cards-labels">
+                    <h3>Coin</h3>
+                    <h3>Price</h3>
+                    <h3>24h Change</h3>
+                    <h3>Market Cap</h3>
+                    <h3>24h Volume</h3>
+                    <h3>Supply</h3>
+                </section>
                 {mapCoinCards}
             </div>
           );
